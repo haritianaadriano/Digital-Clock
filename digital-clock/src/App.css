@@ -1,0 +1,88 @@
+body{
+  background-color: #03252b;
+  justify-content: center;
+}
+
+h1{
+  color: #0098b3;
+}
+
+.clock-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  color: #0098b3;
+  font-size: 2cm;
+}
+
+.Button-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Button{
+  font-size: 0.5cm;
+  color: black;
+  background-color: #0098b3;
+}
+
+#hour-values{
+  height: 2cm !important;
+  background-color: black !important;
+  color: #0098b3 !important;
+  font-size: 2cm;
+  width: 2.5cm;
+}
+
+#minute-values{
+  height: 2cm !important;
+  background-color: black !important;
+  color: #0098b3 !important;
+  font-size: 2cm;
+  width: 2.5cm;
+}
+
+#second-values{
+  height: 2cm !important;
+  background-color: black !important;
+  color: #0098b3 !important;
+  font-size: 2cm;
+  width: 2.5cm;
+}
+
+.Start{
+  height: 1cm;
+  width: 2cm;
+  background-color: #0098b3;
+  font-weight: bold;
+  border-style: none;
+}
+
+.Resume{
+  height: 1cm;
+  width: 2cm;
+  background-color: #0098b3;
+  font-weight: bold;
+  border-style: none;
+}
+
+.Stop{
+  height: 1cm;
+  width: 2cm;
+  background-color: #b32400;
+  font-weight: bold;
+  border-style: none;
+}
+.Reset{
+  height: 1cm;
+  width: 2cm;
+  background-color: #98b300;
+  font-weight: bold;
+  border-style: none;
+}
+
+.container-timer{
+  background-color: black;
+}
