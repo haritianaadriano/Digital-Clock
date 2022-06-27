@@ -2,6 +2,8 @@ import './App.css';
 import Horloge from './function_components/Horloge.js';
 import BtnTimer from './function_components/BtnTimer';
 import Timer from './function_components/Timer';
+import Count_Down from './function_components/CountDown';
+import BtnCountDown from './function_components/BtnCountDown';
 import { useState } from 'react';
 
 function App(){
@@ -15,6 +17,37 @@ function App(){
   //Not started = 0;
   //started = 1;
   //pause = 2
+
+/*Below is the functionement of the Count-down */
+/*
+  const hour= document.getElementById("hour_values");
+  const minutes= document.getElementById("minutes_values");
+  const second= document.getElementById("second_values");
+  
+  const [reverse, setReverse]= useState({H: hour.value, M: minutes.value, S: second.value});
+  var reverseH= reverse.H, reverseM= reverse.M, reverseS= reverse.S;
+
+  /*Mecanic of Count-down*/
+
+ /* const CountDown= () => {
+    if(reverseM == 0){
+      reverseH--;
+      reverseM= 60
+    }
+    if(reverseS == 0){
+      reverseM--;
+      reverseS=60
+    }
+    reverseS--;
+    return setReverse({H:reverseH, M:reverseM, S:reverseS});
+  }
+
+const inverse = () => {
+  CountDown();
+  setInterv(setInterval(CountDown, 1000));
+}
+
+/*Mecanic of timer*/
 
   const start = () => {
     run();
@@ -54,7 +87,6 @@ function App(){
 
   const resume = () => start();
 
-
 /*
     Below is the components who will return by this function
 */
@@ -64,16 +96,16 @@ function App(){
       <div>
         <Horloge></Horloge>
       </div>
-      <div>
         <div>
-          <div><h1>Timer</h1></div>
-          <div className='container-timer'>
-            <Timer time={time}></Timer>
-            <BtnTimer status={status} resume={resume} reset={reset} stop={stop} start={start}></BtnTimer>
+          <div>
+            <div><h1>Timer</h1></div>
+            <div className='container-timer'>
+              <Timer time={time}></Timer>
+              <BtnTimer status={status} resume={resume} reset={reset} stop={stop} start={start}></BtnTimer>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

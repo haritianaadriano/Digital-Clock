@@ -1,6 +1,6 @@
 import React from 'react';
 
-//Here is the button reactive
+//Here is the button reactive for Timer
 
 const BtnTimer = (props) => {
     return (
