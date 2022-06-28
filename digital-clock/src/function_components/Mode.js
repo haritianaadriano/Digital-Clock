@@ -61,7 +61,7 @@ const start = () => {
                 <>
                 <div>
                     <h1>Horloge</h1>
-                        <div className="clock-container">
+                        <div className="horloge_container">
                             <p className="clock">
                             <span>{date.getHours().toString().padStart(2, '0')} :</span>
                             <span> {date.getMinutes().toString().padStart(2, '0')} :</span>
@@ -74,7 +74,7 @@ const start = () => {
                 <>
                 <div>
                     <h1>Count-Down</h1>
-                    <div className="clock-container">
+                    <div className="horloge_container">
                         <p className="clock">
                             <span><input className='hour_values' type="number" onChange={event => setTime({h:event.target.value})} value={time.h}/> :</span>
                             <span>  <input className='minute_values' type="number" onChange={event => setTime({m:event.target.value})} value={time.m}/> :</span>
