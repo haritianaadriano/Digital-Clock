@@ -1,9 +1,9 @@
 import './App.css';
-import Horloge from './function_components/Horloge.js';
 import BtnTimer from './function_components/BtnTimer';
 import Timer from './function_components/Timer';
-import Count_Down from './function_components/CountDown';
-import BtnCountDown from './function_components/BtnCountDown';
+import Mode from './function_components/Mode';
+import ButtonHorloge from './function_components/ButtonHorloge.js';
+import ButtonCount from './function_components/ButtonCount';
 import { useState } from 'react';
 
 function App(){
@@ -13,39 +13,11 @@ function App(){
   const [time, setTime] = useState({ms:0, s:0, m:0, h:0});
   const [interv, setInterv]= useState();
   const [status, setStatus]= useState(0);
+  const [mode, setMode]= useState(0);
   var updatedMs= time.ms, updatedS= time.s, updatedM= time.m, updatedH= time.h;
   //Not started = 0;
   //started = 1;
   //pause = 2
-
-/*Below is the functionement of the Count-down */
-/*
-  const hour= document.getElementById("hour_values");
-  const minutes= document.getElementById("minutes_values");
-  const second= document.getElementById("second_values");
-  
-  const [reverse, setReverse]= useState({H: hour.value, M: minutes.value, S: second.value});
-  var reverseH= reverse.H, reverseM= reverse.M, reverseS= reverse.S;
-
-  /*Mecanic of Count-down*/
-
- /* const CountDown= () => {
-    if(reverseM == 0){
-      reverseH--;
-      reverseM= 60
-    }
-    if(reverseS == 0){
-      reverseM--;
-      reverseS=60
-    }
-    reverseS--;
-    return setReverse({H:reverseH, M:reverseM, S:reverseS});
-  }
-
-const inverse = () => {
-  CountDown();
-  setInterv(setInterval(CountDown, 1000));
-}
 
 /*Mecanic of timer*/
 
@@ -87,6 +59,15 @@ const inverse = () => {
 
   const resume = () => start();
 
+  /*Below is the switch functionement*/
+
+  const Switch = () => {
+    setMode(1);
+  }
+  const Stay = () => {
+    setMode(0);
+  }
+
 /*
     Below is the components who will return by this function
 */
@@ -94,7 +75,9 @@ const inverse = () => {
   return(
     <div className='container'>
       <div>
-        <Horloge></Horloge>
+        <Mode mode={mode}></Mode>
+        <ButtonHorloge mode={mode} switch={Switch} stay={Stay}></ButtonHorloge>
+        <ButtonCount mode={mode} switch={Switch} stay={Stay}></ButtonCount>
       </div>
         <div>
           <div>

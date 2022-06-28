@@ -1,11 +1,20 @@
 body{
-  background-color: #03252b;
+  background-color: #000000;
   justify-content: center;
 }
 
 h1{
-  color: #0098b3;
+  color: #13d844;
   font-family: 'Orbitron', sans-serif;
+}
+
+.span{
+  width: 5cm;
+}
+
+.clock{
+  display: flex;
+  flex-direction: row;
 }
 
 .clock-container{
@@ -13,9 +22,10 @@ h1{
   flex-direction: row;
   justify-content: center;
   background-color: black;
-  color: #0098b3;
+  color: #13d844;
   font-family: 'Orbitron', sans-serif;
   font-size: 2cm;
+  height: 40vh;
 }
 
 .Button-container{
@@ -27,46 +37,49 @@ h1{
 .Button{
   font-size: 0.5cm;
   color: black;
-  background-color: #0098b3;
+  background-color: #13d844;
 }
 
-#hour_values{
-  height: 2cm !important;
+.hour_values{
+  height: 2.75cm !important;
   background-color: black !important;
-  color: #0098b3 !important;
+  color: #13d844 !important;
   font-size: 2cm;
-  width: 2.5cm;
+  width: 4.75cm;
   border-style: solid;
-  border-color: #0098b3;
+  border-color: #13d844;
+  font-family: 'Orbitron', sans-serif;
   border-radius: 5vh, 5vw;
 }
 
-#minutes_values{
-  height: 2cm !important;
+.minute_values{
+  height: 2.75cm !important;
   background-color: black !important;
-  color: #0098b3 !important;
+  color: #13d844 !important;
   font-size: 2cm;
-  width: 2.5cm;
+  width: 4.75cm;
   border-style: solid;
-  border-color: #0098b3;
+  font-family: 'Orbitron', sans-serif;
+  border-color: #13d844;
   border-radius: 5vh, 5vw;
 }
 
-#second_values{
-  height: 2cm !important;
+.second_values{
+  height: 2.75cm !important;
   background-color: black !important;
-  color: #0098b3 !important;
+  color: #13d844 !important;
   font-size: 2cm;
-  width: 2.5cm;
+  width: 4.75cm;
   border-style: solid;
-  border-color: #0098b3;
+  border-color: #13d844;
+  font-family: 'Orbitron', sans-serif;
   border-radius: 5vh, 5vw;
 }
 
 .Start{
   height: 1cm;
   width: 2cm;
-  background-color: #0098b3;
+  background-color: #13d844;
   font-weight: bold;
   border-style: none;
   font-family: 'Orbitron', sans-serif;
@@ -75,7 +88,7 @@ h1{
 .Resume{
   height: 1cm;
   width: 2cm;
-  background-color: #0098b3;
+  background-color: #13d844;
   font-weight: bold;
   border-style: none;
   font-family: 'Orbitron', sans-serif;
@@ -100,4 +113,37 @@ h1{
 
 .container-timer{
   background-color: black;
+}
+
+.Horloge{
+  background-color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  color: #13d844;
+  font-size: 0.5cm;
+  border-style: solid;
+  border-color: #13d844;
+  width: 4.5cm;
+  height: 1.5cm;
+}
+
+.Count{
+  background-color: #000000;
+  font-family: 'Orbitron', sans-serif;
+  color: #13d844;
+  font-size: 0.5cm;
+  border-style: solid;
+  border-color: #13d844;
+  width: 8cm;
+  height: 1.5cm;
+  margin-left: 15px;
+}
+
+.Horloge:hover{
+  background-color: #13d844;
+  color: #000000;
+}
+
+.Count:hover{
+  background-color: #13d844;
+  color: #000000;
 }
